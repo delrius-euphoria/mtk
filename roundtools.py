@@ -407,11 +407,11 @@ if __name__ == '__main__':
     
     b = tk.Button(root,text='popit out')
     b.pack()
+    
     b1 = tk.Button(root,text='popit out')
     b1.pack(pady=10)
-    ToolTip(b,text='Damn this is so neat\nI like it haha')
-    RoundedToolTip(b1,text='Damn this is so neat\nI like it haha')
-    # print(a.__doc__)
-    # ToolTip(b1,text='Damn this is so neat\nI like it haha',side='left')
     
+    ToolTip(b,text='Tooltip 1\nSimple Tooltip')
+    RoundedToolTip(b1,text='Tooltip 2\nSimple Tooltip 2')
+
     root.mainloop()
