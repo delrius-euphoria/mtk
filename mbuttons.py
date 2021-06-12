@@ -1,7 +1,16 @@
 import tkinter as tk
 
 class MButton(tk.Button):
-    def __init__(self,master,hovfg='default',spacize=False,hovbg='default',padder=30,unit='default',*args,**kwargs):
+    """Simple button that responds to hover, additional arguments are:
+        hovfg   -- Forground color when button is hovered
+        hovbg   -- Background color when button is hovered
+        spacize -- To add a empty space between each character
+        padder  -- Extra width to be provided for the widget(depends on the unit option)
+        unit    -- If unit is px uses pixels for width and height else uses default units
+
+    NOTE: These options cannot be changed with the config/configure method
+    """
+    def __init__(self,master,hovfg: str='default',spacize: bool=False,hovbg: str='default',padder: int=30,unit: str='default',*args,**kwargs):
         
         # Initialization of the button
         if unit == 'px':
@@ -49,7 +58,7 @@ class MButton(tk.Button):
 if __name__ == '__main__':
     root = tk.Tk()
 
-    a = MButton(root,text='HELLO',bg='black',fg='white',hovfg='#fbc531',hovbg='#192a56',spacize=True,font=('calibri',21), unit='px')
+    a = MButton(root,text='HELLO',bg='black',fg='white',hovfg='#fbc531',hovbg='#192a56',spacize=True,font=('calibri',21),unit='px')
     a.pack()
     
     root.mainloop()
