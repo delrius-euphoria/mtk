@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
 
 class RoundedToolTip:
     """Custom rounded tooltips, easy to use, specify widget and text as positional arguments
